@@ -1,9 +1,22 @@
-"# Relay-Controlled Sound Synthesizer" 
-Relay-Controlled Sound Synthesizer
-Welcome to the Relay-Controlled Sound Synthesizer project repository! This project aims to develop and implement a sound synthesizer utilizing relays on the Nexys A7-50T FPGA board. At the project, Rather than generating audio signals directly, the system utilizes relays linked to Pmod connectors to produce audible sounds by controlling the on and off states of relay switches. Also the user can control the basic functions like play, pause, song navigaton by using push buttons. can compose and play basic melodies by programming the relay sequences.
 
-Project Components:
-Research Guru (Architectural Engineer): This role involves diving deep into the project's topic, creating detailed plans, and providing a clear picture of how everything will come together.
+Relay-Controlled Sound Synthesizer
+
+Welcome to the Relay-Controlled Sound Synthesizer project repository! This project aims to develop and implement a sound synthesizer utilizing relays on the Nexys A7-50T FPGA board. At the project, Rather than generating audio signals directly, the system utilizes relays linked to Pmod connectors to produce audible sounds by controlling the on and off states of relay switches. Also the user can control the basic functions like play, pause, song navigaton by using push buttons. The LEDs and 7-segment display helps to visualization of the melody. 
+
+Team Members
+
+Mohamed Abdelreheem: 
+
+
+Miguel Ángel Jiménez Duarte: 
+
+
+Yusuf Çetin Onaran: 
+
+
+
+
+This role involves diving deep into the project's topic, creating detailed plans, and providing a clear picture of how everything will come together.
 
 Creative Content Wizard: Responsible for crafting engaging content, including videos and social media content, to showcase the project and generate excitement.
 
