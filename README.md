@@ -16,6 +16,27 @@ Yusuf Çetin Onaran:
 
 
 
+
+Theoretical description
+
+
+
+Hardware description of demo application 
+
+
+
+Software description 
+
+
+Component(s) simulation
+
+
+Instructions 
+
+
+References 
+
+
 This role involves diving deep into the project's topic, creating detailed plans, and providing a clear picture of how everything will come together.
 
 Creative Content Wizard: Responsible for crafting engaging content, including videos and social media content, to showcase the project and generate excitement.
@@ -35,6 +56,7 @@ Detailed documentation, including research findings, architectural plans, and sc
 Code related to the project is stored in the Code folder, organized into subfolders for different components.
 
 Media assets, such as videos and images, are stored in the Media folder to showcase the project's progress and results.
+![FPGA Project Schematic](https://github.com/Mohamedt4r29/Relay-Controlled-Sound-Synthesizer/assets/164936141/361734d0-5251-40f4-9b8f-6ded01f3b049)
 
 Project Status:
 This project is currently in the development phase, with each team member actively contributing to their respective roles. We welcome contributions and feedback from the community to help us make this project a success!
