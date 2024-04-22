@@ -20,20 +20,6 @@ The project consists of the Nexys A7-50T board, Arduino Uno R3, 3 pieces of 2 re
 ## Component(s) Simulation
 
 ## VHDL Code Explanation
-The VHDL code provided in this repository implements a rhythmic pattern generator for the sound synthesizer. It controls the toggling of outputs based on the states of the switches (SW). Each switch corresponds to a different rhythmic pattern or beat division. The code utilizes the clock signal (CLK100MHZ) to generate the beats and a push-button input (BTNC) to reset the beat states.
-
-### Description of the VHDL Code:
-- The code defines an entity named `PROJECT` with inputs for the clock signal (`CLK100MHZ`), switch inputs (`SW`), a push-button input (`BTNC`), and outputs for relay control (`JA`) and LED visualization (`LED`).
-- Inside the architecture block, the code includes processes for beat generation and reset logic.
-- The beat generation process increments counters (`period1` to `period4`) based on the clock signal and toggles the states of the beats (`state1` to `state4`) when the corresponding counter reaches a certain threshold.
-- The reset logic process detects when the push-button is pressed (`BTNC = '0'`) and resets the beat states and counters.
-- Outputs (`JA` and `LED`) are assigned the values of the beat states to control the relays and visualize the beats on LEDs.
-
-This code forms the foundation for generating rhythmic patterns, which can be further developed to create more complex musical sequences or integrated into larger FPGA-based music synthesis projects.
-
-## Instructions
-
-## VHDL Code Explanation
 The VHDL code provided in this repository implements a rhythmic pattern generator for the sound synthesizer. This generator is responsible for producing different rhythmic patterns based on the states of the input switches (`SW`). The code leverages a clock signal (`CLK100MHZ`) to control the timing of the beats and a push-button input (`BTNC`) for resetting the beat states.
 
 ### Algorithmic Overview:
@@ -63,6 +49,8 @@ The VHDL code provided in this repository implements a rhythmic pattern generato
 
 This rhythmic pattern generator serves as the foundation for creating various musical sequences, enabling users to experiment with different beats and rhythms. Its modular design allows for easy integration into larger FPGA-based music synthesis projects.
 
+
+## Instructions
 
 ## References
 
