@@ -17,6 +17,12 @@ The project consists of the Nexys A7-50T board, Arduino Uno R3, 3 pieces of 2 re
 
 ## Software Description
 
+## Video Demo
+Here's a video demonstrating the results of our code in action:
+
+[![Video Demo](https://github.com/Mohamedt4r29/Relay-Controlled-Sound-Synthesizer/assets/51502560/a9836c23-da08-4025-85c2-d91725da5aa7)](https://github.com/Mohamedt4r29/Relay-Controlled-Sound-Synthesizer/assets/51502560/a9836c23-da08-4025-85c2-d91725da5aa7)
+
+
 ## Component(s) Simulation
 
 ## VHDL Code Explanation
