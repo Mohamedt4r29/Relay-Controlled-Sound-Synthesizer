@@ -21,6 +21,9 @@ The project consists of the Nexys A7-50T board, Arduino Uno R3, 3 pieces of 2 re
 
 ## Instructions
 
+## VHDL Code Explanation
+The VHDL code provided in this repository implements a rhythmic pattern generator for the sound synthesizer. It controls the toggling of outputs based on the states of the switches (SW). Each switch corresponds to a different rhythmic pattern or beat division. The code utilizes the clock signal (CLK100MHZ) to generate the beats and a push-button input (BTNC) to reset the beat states.
+
 ## References
 
 ## How to Contribute
