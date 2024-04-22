@@ -34,7 +34,35 @@ This code forms the foundation for generating rhythmic patterns, which can be fu
 ## Instructions
 
 ## VHDL Code Explanation
-The VHDL code provided in this repository implements a rhythmic pattern generator for the sound synthesizer. It controls the toggling of outputs based on the states of the switches (SW). Each switch corresponds to a different rhythmic pattern or beat division. The code utilizes the clock signal (CLK100MHZ) to generate the beats and a push-button input (BTNC) to reset the beat states.
+The VHDL code provided in this repository implements a rhythmic pattern generator for the sound synthesizer. This generator is responsible for producing different rhythmic patterns based on the states of the input switches (`SW`). The code leverages a clock signal (`CLK100MHZ`) to control the timing of the beats and a push-button input (`BTNC`) for resetting the beat states.
+
+### Algorithmic Overview:
+1. **Initialization**: 
+   - The code initializes variables to manage the durations and states of each beat period.
+   - It also sets the initial state of the switches and the reset signal.
+
+2. **Beat Generation Process**:
+   - The beat generation process is triggered by the rising edge of the clock signal.
+   - For each switch, a corresponding beat pattern is generated based on its state (`SW(0)` to `SW(3)`).
+   - The duration of each beat period is controlled by incrementing counters (`period1` to `period4`) with each clock cycle.
+   - When a counter reaches its predefined threshold, the state of the corresponding beat is toggled (`state1` to `state4`).
+
+3. **Reset Logic**:
+   - The reset logic process detects when the push-button (`BTNC`) is pressed.
+   - When the button is pressed, the reset signal is activated, resetting all beat periods and states to their initial values.
+
+4. **Output Assignment**:
+   - The generated beat states (`state1` to `state4`) are assigned to output signals (`JA`) for controlling the relays.
+   - Additionally, the beat states are visualized on LEDs (`LED`) to provide real-time feedback.
+
+### Description of the VHDL Code:
+- The `PROJECT` entity defines the input and output ports required for the synthesizer.
+- Inside the architecture block, processes handle beat generation and reset logic.
+- Beat durations are managed using counters, and beat states are toggled accordingly.
+- Outputs are assigned the values of the beat states to control relays and visualize beats on LEDs.
+
+This rhythmic pattern generator serves as the foundation for creating various musical sequences, enabling users to experiment with different beats and rhythms. Its modular design allows for easy integration into larger FPGA-based music synthesis projects.
+
 
 ## References
 
