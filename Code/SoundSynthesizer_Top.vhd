@@ -1,10 +1,10 @@
 library ieee;
 use ieee.std_logic_1164.all;
 
--- Declaration of inputs and outputs
-entity SoundSynthesizer_Top is
+entity TopLevel is
     Port (
         CLK100MHZ : in std_logic;
+        BTNC      : in std_logic;
         SW        : in std_logic_vector(3 downto 0);
         Relay1    : out std_logic;
         Relay2    : out std_logic;
@@ -12,18 +12,13 @@ entity SoundSynthesizer_Top is
         Relay4    : out std_logic;
         LED       : out std_logic_vector(3 downto 0)
     );
-end SoundSynthesizer_Top;
+end TopLevel;
 
--- Architecture:
-architecture Behavioral_Top of SoundSynthesizer_Top is 
-
-    -- Declaration of signals for the internal SoundSynthesizer module
-    signal period1, period2, period3, period4 : integer range 0 to 90000000 := 0;
-    signal state1,  state2,  state3,  state4  : std_logic := '0';
-
+architecture Behavioral of TopLevel is
     component SoundSynthesizer is
         Port (
             CLK100MHZ : in std_logic;
+            BTNC      : in std_logic;
             SW        : in std_logic_vector(3 downto 0);
             Relay1    : out std_logic;
             Relay2    : out std_logic;
@@ -33,18 +28,31 @@ architecture Behavioral_Top of SoundSynthesizer_Top is
         );
     end component;
 
-begin
+    signal relay1_internal, relay2_internal, relay3_internal, relay4_internal : std_logic;
+    signal led_internal : std_logic_vector(3 downto 0);
 
-    -- Instantiation of SoundSynthesizer module
-    SoundSynthesizer_Instance : SoundSynthesizer
+begin
+    -- Instantiation of SoundSynthesizer entity
+    U_SoundSynthesizer: SoundSynthesizer
         port map (
             CLK100MHZ => CLK100MHZ,
+            BTNC      => BTNC,
             SW        => SW,
-            Relay1    => Relay1,
-            Relay2    => Relay2,
-            Relay3    => Relay3,
-            Relay4    => Relay4,
-            LED       => LED
+            Relay1    => relay1_internal,
+            Relay2    => relay2_internal,
+            Relay3    => relay3_internal,
+            Relay4    => relay4_internal,
+            LED       => led_internal
         );
 
-end Behavioral_Top;
+    -- Output connections
+    Relay1 <= relay1_internal;
+    Relay2 <= relay2_internal;
+    Relay3 <= relay3_internal;
+    Relay4 <= relay4_internal;
+    LED    <= led_internal;
+
+    -- Clock constraint
+    create_generated_clock -name clk100mhz_pin -source [get_pins { CLK100MHZ }]
+
+end Behavioral;
