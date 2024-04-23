@@ -10,16 +10,9 @@ Eirini Vasileiadi: Responsible for presentation, video
 
 # Theoretical Description
 
-Hardware Description of Demo Application
+# Hardware Description of Demo Application
 The project consists of the Nexys A7-50T board, Arduino Uno R3, 2 pieces of 2 relay modules, logic level converter, breadboard, and jumper cables. The Nexys board provides logic signals to the relay modules via Pmod Ports. Each Pmod Port group (JA, JB,JC, JD) has 2 GND, 2 VCC (3.3V), and 8 logic signals. However, the relay modules require 5V power and 5V logic signal. To provide 5V power to relay modules, we use an Arduino. The Arduino provides 5V power to the relay modules by power ports. But we also need to change voltage level of logic signal. For this, we use a logic level converter ensures up to 3.3V logic signals are converted to 5V. Logic level converter module has two side. One side has 4 low logic signal (LV), 1 GND and 1 low voltage input. Other side includes 4 High logic signal output, 1GND and 1 high voltage input. But all the electronic components must connected to same ground line. So we connected to all the ground line together from Nexys, Arduino, Relay modules and Logic Level Converter. Brifely, we provide 4 Logic signals upgraded by LLC from Nexys FPGA board to 2 pieces 2 relay module and we provide the power for modules from Arduino. Here is the schematics of component connections: 
 ![Schematic FPGA Project ](https://github.com/Mohamedt4r29/Relay-Controlled-Sound-Synthesizer/assets/164936141/00a854cf-404a-4b3b-9c61-e81784828cd4)
-
-
-
-## Hardware Description of Demo Application
-The project consists of the Nexys A7-50T board, Arduino Uno R3, 3 pieces of 2 relay modules, 2 pieces of logic level converters, breadboard, and jumper cables. The Nexys board provides logic signals to the relay modules via 10 Pmod Ports. Each 10 Pmod Port has 2 GND, 2 VCC (3V3), and 8 logic signals. However, the relay modules require 5V power and 5V logic signal. To address this, we also use an Arduino and logic level converters. The Arduino provides 5V power to the relay modules, while the logic level converter ensures up to 3.3V logic signals are converted to 5V.
-
-![FPGA Project Schematic](https://github.com/Mohamedt4r29/Relay-Controlled-Sound-Synthesizer/assets/164936141/361734d0-5251-40f4-9b8f-6ded01f3b049)
 
 ## Software Description
 
