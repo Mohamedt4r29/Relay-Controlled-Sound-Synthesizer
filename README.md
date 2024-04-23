@@ -10,6 +10,13 @@ Miguel Ángel Jiménez Duarte: Responsible for top-level code, RTL schematics
 Yusuf Çetin Onaran: Responsible for hardware design, schematics, Github, physical implementation
 
 Eirini Vasileiadi: Responsible for presentation, video
+## Voltage Regulator
+
+Below is an image of the voltage regulator used in our sound synthesizer project:
+
+![Voltage Regulator](https://github.com/Mohamedt4r29/Relay-Controlled-Sound-Synthesizer/blob/main/assets/51502560/548d0c9a-ad5f-48b2-aba5-4a3dc3e0413f)
+
+This voltage regulator plays a crucial role in regulating the voltage levels within our system, ensuring stable and reliable power delivery to the various components of the synthesizer.
 
 
 # Theoretical Description
