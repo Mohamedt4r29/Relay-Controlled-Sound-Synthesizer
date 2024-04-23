@@ -63,7 +63,7 @@ This rhythmic pattern generator serves as the foundation for creating various mu
 
 ## References
 https://digilent.com/reference/programmable-logic/nexys-a7/reference-manual
-
+https://docs.arduino.cc/hardware/uno-rev3
 
 ## How to Contribute
 1. Fork the repository and clone it to your local machine.
