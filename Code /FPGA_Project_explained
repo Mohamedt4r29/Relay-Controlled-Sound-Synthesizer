@@ -6,6 +6,7 @@ use ieee.std_logic_1164.all;
 entity SoundSynthesizer is
     Port (
         CLK100MHZ : in std_logic;
+        BTNC      : in std_logic;
         SW        : in std_logic_vector(3 downto 0);
         Relay1    : out std_logic;
         Relay2    : out std_logic;
@@ -33,7 +34,8 @@ architecture Behavioral of SoundSynthesizer is
     begin 
         if rising_edge(CLK100MHZ) then   
 
-            -- If the first switch is turned on, the signal is sent after one full period (0.9 seconds) for the single beat. 
+            -- If the first switch is turned on, the signal is sent 
+            -- after one full period (0.9 seconds) for the single beat.  
             if SW(0) = '1' then          
                 if period1 = 90000000 then
                     state1 <= not state1;
@@ -41,27 +43,33 @@ architecture Behavioral of SoundSynthesizer is
                 else 
                     period1 <= period1 + 1;
                  end if;
+            end if;
                 
-            -- If the second switch is turned on, the signal is sent every half period (0.45 seconds) for the quaver beat. 
-            elsif SW(1) = '1' then
+            -- If the second switch is turned on, the signal is sent every 
+            -- half period (0.45 seconds) for the quaver beat. 
+            if SW(1) = '1' then
                 if period2 = 45000000 then
                     state2 <= not state2;
                      period2 <= 0;
                 else 
-                    period2 <= period2 +1;
+                    period2 <= period2 + 1;
                 end if;
-
-            -- If the second switch is turned on, the signal is sent every third fraction of period (0.3 seconds) for the triplet beat. 
-            elsif SW(2) = '1' then
+            end if;
+            
+            -- If the second switch is turned on, the signal is sent every  
+            -- third fraction of period (0.3 seconds) for the triplet beat. 
+            if SW(2) = '1' then
                 if period3 = 30000000 then
                     state3 <= not state3;
                     period3 <= 0;
                 else
                     period3 <= period3 +1;
                 end if;
+            end if;
 
-            -- If the second switch is turned on, the signal is sent every one quater of period (0.225 seconds) for the semi-quaver beat. 
-            elsif SW(3) = '1' then
+            -- If the second switch is turned on, the signal is sent every 
+            -- one quater of period (0.225 seconds) for the semi-quaver beat. 
+            if SW(3) = '1' then
                 if period4 = 22500000 then
                     state4 <= not state4;
                     period4 <= 0;
@@ -69,6 +77,20 @@ architecture Behavioral of SoundSynthesizer is
                     period4 <= period4 +1;
                 end if;
             end if;
+
+            -- If the button is pressed, no matter which is the state of
+            -- any of the switches, the clock will be reset 
+            if BTNC = '1' then
+                period1 <= 0;
+                period2 <= 0;
+                period3 <= 0;
+                period4 <= 0;
+                state1 <= '0';
+                state2 <= '0';
+                state3 <= '0';
+                state4 <= '0';
+                end if;
+
         end if;
     end process;
 
@@ -87,5 +109,3 @@ architecture Behavioral of SoundSynthesizer is
     
     
 end Behavioral;
-
-
