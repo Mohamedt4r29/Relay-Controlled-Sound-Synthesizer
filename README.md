@@ -62,6 +62,8 @@ This rhythmic pattern generator serves as the foundation for creating various mu
 ## Instructions
 
 ## References
+https://digilent.com/reference/programmable-logic/nexys-a7/reference-manual
+
 
 ## How to Contribute
 1. Fork the repository and clone it to your local machine.
