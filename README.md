@@ -61,8 +61,14 @@ This rhythmic pattern generator serves as the foundation for creating various mu
 
 
 
+## Schematic
 
-## Instructions
+Below is a schematic diagram illustrating the hardware configuration of our sound synthesizer project:
+
+![Schematic](https://github.com/Mohamedt4r29/Relay-Controlled-Sound-Synthesizer/assets/51502560/8739f45e-9bb1-4bd2-819b-c05e1cf5c758)
+
+This schematic provides a visual representation of the connections between the various components utilized in our project, such as the Nexys A7-50T FPGA board, Arduino Uno R3, relay modules, logic level converters, and other relevant hardware components. It serves as a helpful reference for understanding the hardware architecture and setup of our project.
+
 
 
 ## References
