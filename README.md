@@ -16,46 +16,44 @@ The project consists of the Nexys A7-50T board, Arduino Uno R3, 2 pieces of 2 re
 ![Schematic FPGA Project](https://github.com/Mohamedt4r29/Relay-Controlled-Sound-Synthesizer/assets/164936141/00a854cf-404a-4b3b-9c61-e81784828cd4)
 
 
-## Software Description
+
+
+### VHDL Code Explanation
+
+The VHDL code provided in this repository serves as the foundation for a Relay-Controlled Sound Synthesizer implemented on an FPGA board. Below is an overview of the functionality and structure of the VHDL code:
+
+#### Entity Declaration:
+The VHDL code begins with the declaration of the `SoundSynthesizer` entity. This entity defines the input and output ports required for the synthesizer. The input ports include:
+- `CLK100MHZ`: Clock signal input.
+- `BTNC`: Push-button input for resetting the beat states.
+- `SW`: Four-bit vector representing the states of input switches.
+The output ports include:
+- `Relay1`, `Relay2`, `Relay3`, `Relay4`: Outputs controlling the relay switches.
+- `LED`: Four-bit vector for visualizing beat states on LEDs.
+
+#### Architecture:
+Inside the `Behavioral` architecture block, processes handle beat generation and reset logic. The architecture follows a sequential logic design, triggered by the rising edge of the clock signal (`CLK100MHZ`).
+
+#### Beat Generation Process:
+The beat generation process is responsible for producing different rhythmic patterns based on the states of the input switches (`SW`). The code supports four different beats corresponding to each switch (`SW(0)` to `SW(3)`).
+
+- **Initialization**: The code initializes variables to manage the durations and states of each beat period. It also sets the initial state of the switches and the reset signal.
+- **Beat Generation**: For each switch, a corresponding beat pattern is generated based on its state. The duration of each beat period is controlled by incrementing counters (`period1` to `period4`) with each clock cycle. When a counter reaches its predefined threshold, the state of the corresponding beat is toggled.
+- **Reset Logic**: The reset logic process detects when the push-button (`BTNC`) is pressed. When the button is pressed, the reset signal is activated, resetting all beat periods and states to their initial values.
+- **Output Assignment**: The generated beat states are assigned to output signals for controlling the relay switches (`Relay1` to `Relay4`). Additionally, the beat states are visualized on LEDs to provide real-time feedback.
+
+#### Description of the VHDL Code:
+- The code follows a modular design, with clear separation of functionality into processes and entities, enhancing readability and maintainability.
+- It leverages VHDL's concurrent and sequential constructs to efficiently manage the timing and control of beat generation.
+- The code is well-commented, providing detailed explanations of each section's purpose and functionality.
+
+This VHDL code forms the core of the Relay-Controlled Sound Synthesizer, providing the logic for generating rhythmic patterns and controlling relay switches based on user input. It serves as a flexible and customizable platform for creating various musical sequences and exploring different beats and rhythms.
+
 
 ## Video Demo
 Here's a video demonstrating the results of our code in action:
 
 [![Video Demo](https://github.com/Mohamedt4r29/Relay-Controlled-Sound-Synthesizer/assets/51502560/b0e89de0-d8c3-42d6-9b44-4cc40e8a2b04)](https://github.com/Mohamedt4r29/Relay-Controlled-Sound-Synthesizer/assets/51502560/b0e89de0-d8c3-42d6-9b44-4cc40e8a2b04)
-
-
-## VHDL Code Explanation
-The VHDL code provided in this repository implements a rhythmic pattern generator for the sound synthesizer. This generator is responsible for producing different rhythmic patterns based on the states of the input switches (`SW`). The code leverages a clock signal (`CLK100MHZ`) to control the timing of the beats and a push-button input (`BTNC`) for resetting the beat states.
-
-### Algorithmic Overview:
-1. **Initialization**: 
-   - The code initializes variables to manage the durations and states of each beat period.
-   - It also sets the initial state of the switches and the reset signal.
-
-2. **Beat Generation Process**:
-   - The beat generation process is triggered by the rising edge of the clock signal.
-   - For each switch, a corresponding beat pattern is generated based on its state (`SW(0)` to `SW(3)`).
-   - The duration of each beat period is controlled by incrementing counters (`period1` to `period4`) with each clock cycle.
-   - When a counter reaches its predefined threshold, the state of the corresponding beat is toggled (`state1` to `state4`).
-
-3. **Reset Logic**:
-   - The reset logic process detects when the push-button (`BTNC`) is pressed.
-   - When the button is pressed, the reset signal is activated, resetting all beat periods and states to their initial values.
-
-4. **Output Assignment**:
-   - The generated beat states (`state1` to `state4`) are assigned to output signals (`JA`) for controlling the relays.
-   - Additionally, the beat states are visualized on LEDs (`LED`) to provide real-time feedback.
-
-### Description of the VHDL Code:
-- The `SoundSynthesizer` entity defines the input and output ports required for the synthesizer.
-- Inside the `Behavioral` architecture block, processes handle beat generation and reset logic.
-- Beat durations are managed using counters, and beat states are toggled accordingly.
-- Outputs are assigned the values of the beat states to control relays and visualize beats on LEDs.
-
-This rhythmic pattern generator serves as the foundation for creating various musical sequences, enabling users to experiment with different beats and rhythms. Its modular design allows for easy integration into larger FPGA-based music synthesis projects.
-
-
-
 
 
 
