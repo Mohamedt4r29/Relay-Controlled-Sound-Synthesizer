@@ -1,22 +1,20 @@
 # Relay-Controlled Sound Synthesizer
 
-Welcome to the Relay-Controlled Sound Synthesizer project repository! Our goal is to develop and implement a sound synthesizer utilizing relays on the Nexys A7-50T FPGA board. Instead of generating audio signals directly, our system uses relays linked to Pmod connectors to produce audible sounds by controlling the on and off states of relay switches. Additionally, users can control basic functions like play, pause, and song navigation using push buttons. LEDs and a 7-segment display help visualize the melody.
+Welcome to the Relay-Controlled Sound Synthesizer project repository! Our aim is to develop and implement a sound synthesizer using relays on the Nexys A7-50T FPGA board. Instead of directly generating audio signals, our system utilizes relays connected to Pmod connectors to produce audible sounds by controlling the on and off states of relay switches. Additionally, users can control basic functions like play, pause, and song navigation using push buttons. LEDs and a 7-segment display help visualize the melody.
 
-# Team Members
-Mohamed Abdelreheem: Responsible for constrains file, Github, presentation
+## Team Members
+- **Mohamed Abdelreheem**: Responsible for constraints file, GitHub, and presentation.
+- **Miguel Ángel Jiménez Duarte**: Responsible for top-level code and RTL schematics.
+- **Yusuf Çetin Onaran**: Responsible for hardware design, schematics, GitHub, and physical implementation.
+- **Eirini Vasileiadi**: Responsible for presentation and video.
 
-Miguel Ángel Jiménez Duarte: Responsible for top-level code, RTL schematics
+## Theoretical Description
 
-Yusuf Çetin Onaran: Responsible for hardware design, schematics, Github, physical implementation
+## Hardware Description of Demo Application
+The project consists of the Nexys A7-50T board, Arduino Uno R3, 2 pieces of 2 relay modules, a logic level converter, breadboard, and jumper cables. The Nexys board provides logic signals to the relay modules via Pmod Ports. Each Pmod Port group (JA, JB, JC, JD) has 2 GND, 2 VCC (3.3V), and 8 logic signals. However, the relay modules require 5V power and 5V logic signal. To provide 5V power to the relay modules, we use an Arduino. The Arduino supplies 5V power to the relay modules via power ports. However, we also need to change the voltage level of logic signals. For this, we use a logic level converter to ensure that up to 3.3V logic signals are converted to 5V. The logic level converter module has two sides: one side with 4 low logic signal (LV), 1 GND, and 1 low voltage input, and the other side includes 4 high logic signal outputs, 1 GND, and 1 high voltage input. However, all the electronic components must be connected to the same ground line. Therefore, we connect all the ground lines together from the Nexys board, Arduino, relay modules, and logic level converter. In summary, we provide 4 logic signals upgraded by the logic level converter from the Nexys FPGA board to 2 pieces of 2 relay modules, and we provide power for the modules from the Arduino. Here is the schematic of the component connections:
 
-Eirini Vasileiadi: Responsible for presentation, video
+![Schematic FPGA Project](https://github.com/Mohamedt4r29/Relay-Controlled-Sound-Synthesizer/assets/164936141/00a854cf-404a-4b3b-9c61-e81784828cd4)
 
-
-# Theoretical Description
-
-# Hardware Description of Demo Application
-The project consists of the Nexys A7-50T board, Arduino Uno R3, 2 pieces of 2 relay modules, logic level converter, breadboard, and jumper cables. The Nexys board provides logic signals to the relay modules via Pmod Ports. Each Pmod Port group (JA, JB,JC, JD) has 2 GND, 2 VCC (3.3V), and 8 logic signals. However, the relay modules require 5V power and 5V logic signal. To provide 5V power to relay modules, we use an Arduino. The Arduino provides 5V power to the relay modules by power ports. But we also need to change voltage level of logic signal. For this, we use a logic level converter ensures up to 3.3V logic signals are converted to 5V. Logic level converter module has two side. One side has 4 low logic signal (LV), 1 GND and 1 low voltage input. Other side includes 4 High logic signal output, 1GND and 1 high voltage input. But all the electronic components must connected to same ground line. So we connected to all the ground line together from Nexys, Arduino, Relay modules and Logic Level Converter. Brifely, we provide 4 Logic signals upgraded by LLC from Nexys FPGA board to 2 pieces 2 relay module and we provide the power for modules from Arduino. Here is the schematics of component connections: 
-![Schematic FPGA Project ](https://github.com/Mohamedt4r29/Relay-Controlled-Sound-Synthesizer/assets/164936141/00a854cf-404a-4b3b-9c61-e81784828cd4)
 
 ## Software Description
 
