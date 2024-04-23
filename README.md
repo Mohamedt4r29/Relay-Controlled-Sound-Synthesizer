@@ -65,6 +65,11 @@ This rhythmic pattern generator serves as the foundation for creating various mu
 https://digilent.com/reference/programmable-logic/nexys-a7/reference-manual
 https://docs.arduino.cc/hardware/uno-rev3
 https://github.com/tomas-fryza/vhdl-course/tree/master/lab2-logic
+https://github.com/tomas-fryza/vhdl-course/tree/master/lab5-counter
+https://www.pantechsolutions.net/relay-interface-with-fpga
+https://raw.githubusercontent.com/Digilent/digilent-xdc/master/Nexys-A7-50T-Master.xdc
+https://youtu.be/qep13jRYDxs?si=0CZNVqrT8JzZwwl9
+https://youtu.be/SL9fmA2PdMw?si=hBiaiLtUg-rCYED1
 
 ## How to Contribute
 1. Fork the repository and clone it to your local machine.
