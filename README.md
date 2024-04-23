@@ -64,15 +64,19 @@ This rhythmic pattern generator serves as the foundation for creating various mu
 
 ## Instructions
 
+
 ## References
-https://digilent.com/reference/programmable-logic/nexys-a7/reference-manual
-https://docs.arduino.cc/hardware/uno-rev3
-https://github.com/tomas-fryza/vhdl-course/tree/master/lab2-logic
-https://github.com/tomas-fryza/vhdl-course/tree/master/lab5-counter
-https://www.pantechsolutions.net/relay-interface-with-fpga
-https://raw.githubusercontent.com/Digilent/digilent-xdc/master/Nexys-A7-50T-Master.xdc
-https://youtu.be/qep13jRYDxs?si=0CZNVqrT8JzZwwl9
-https://youtu.be/SL9fmA2PdMw?si=hBiaiLtUg-rCYED1
+
+Here are some useful resources related to our project:
+
+- [Nexys A7 Reference Manual](https://digilent.com/reference/programmable-logic/nexys-a7/reference-manual) - Provides detailed information about the Nexys A7 FPGA board.
+- [Arduino Uno Rev3 Documentation](https://docs.arduino.cc/hardware/uno-rev3) - Documentation for the Arduino Uno R3, which we used in our project.
+- [VHDL Course - Lab 2: Logic](https://github.com/tomas-fryza/vhdl-course/tree/master/lab2-logic) - VHDL course materials covering logic design, which provided valuable insights for our project.
+- [VHDL Course - Lab 5: Counter](https://github.com/tomas-fryza/vhdl-course/tree/master/lab5-counter) - Another resource from the VHDL course, focusing on counter design, which contributed to our code development.
+- [Relay Interface with FPGA](https://www.pantechsolutions.net/relay-interface-with-fpga) - Information on interfacing relays with an FPGA, helpful for understanding relay control in our project.
+- [Nexys A7-50T Master Constraint File](https://raw.githubusercontent.com/Digilent/digilent-xdc/master/Nexys-A7-50T-Master.xdc) - Constraint file for the Nexys A7-50T board, used to map input and output ports in our project.
+- [Video Tutorial: Nexys A7 FPGA Board Setup](https://youtu.be/qep13jRYDxs?si=0CZNVqrT8JzZwwl9) - A helpful video guide demonstrating the setup process for the Nexys A7 FPGA board.
+- [Video Tutorial: Introduction to VHDL](https://youtu.be/SL9fmA2PdMw?si=hBiaiLtUg-rCYED1) - An introductory video tutorial on VHDL, useful for beginners learning about hardware description languages.
 
 ## How to Contribute
 1. Fork the repository and clone it to your local machine.
