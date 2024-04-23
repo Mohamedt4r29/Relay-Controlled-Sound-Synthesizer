@@ -26,8 +26,6 @@ Here's a video demonstrating the results of our code in action:
 [![Video Demo](https://github.com/Mohamedt4r29/Relay-Controlled-Sound-Synthesizer/assets/51502560/b0e89de0-d8c3-42d6-9b44-4cc40e8a2b04)](https://github.com/Mohamedt4r29/Relay-Controlled-Sound-Synthesizer/assets/51502560/b0e89de0-d8c3-42d6-9b44-4cc40e8a2b04)
 
 
-## Component(s) Simulation
-
 ## VHDL Code Explanation
 The VHDL code provided in this repository implements a rhythmic pattern generator for the sound synthesizer. This generator is responsible for producing different rhythmic patterns based on the states of the input switches (`SW`). The code leverages a clock signal (`CLK100MHZ`) to control the timing of the beats and a push-button input (`BTNC`) for resetting the beat states.
 
@@ -51,12 +49,17 @@ The VHDL code provided in this repository implements a rhythmic pattern generato
    - Additionally, the beat states are visualized on LEDs (`LED`) to provide real-time feedback.
 
 ### Description of the VHDL Code:
-- The `PROJECT` entity defines the input and output ports required for the synthesizer.
-- Inside the architecture block, processes handle beat generation and reset logic.
+- The `SoundSynthesizer` entity defines the input and output ports required for the synthesizer.
+- Inside the `Behavioral` architecture block, processes handle beat generation and reset logic.
 - Beat durations are managed using counters, and beat states are toggled accordingly.
 - Outputs are assigned the values of the beat states to control relays and visualize beats on LEDs.
 
 This rhythmic pattern generator serves as the foundation for creating various musical sequences, enabling users to experiment with different beats and rhythms. Its modular design allows for easy integration into larger FPGA-based music synthesis projects.
+
+
+
+
+
 
 
 ## Instructions
