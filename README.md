@@ -49,17 +49,6 @@ The beat generation process is responsible for producing different rhythmic patt
 
 This VHDL code forms the core of the Relay-Controlled Sound Synthesizer, providing the logic for generating rhythmic patterns and controlling relay switches based on user input. It serves as a flexible and customizable platform for creating various musical sequences and exploring different beats and rhythms.
 
-
-### Video Demo and Project Files Download
-Here's a video demonstrating the results of our code in action:
-
-[![Video Demo](https://github.com/Mohamedt4r29/Relay-Controlled-Sound-Synthesizer/assets/51502560/ab2a7dec-32a8-439a-bc4c-3b222d5abf93)](https://github.com/Mohamedt4r29/Relay-Controlled-Sound-Synthesizer/assets/51502560/ab2a7dec-32a8-439a-bc4c-3b222d5abf93)
-
-If you'd like to download the project files, you can access them via the following link:
-
-[Download Project Files](https://drive.google.com/file/d/1B6X_Gj_meZIOL6gVW5wNe7sOObVb9xka/view?usp=drive_link)
-
-
 ## Simulation
 
 To verify the functionality of the Sound Synthesizer design, we conducted simulations using Vivado Simulator. The simulation results confirmed that the synthesizer operates as expected, generating the desired rhythmic patterns based on the input switch states and button presses.
@@ -71,6 +60,17 @@ Below is a snapshot of the simulation waveform:
 In the waveform, you can observe the behavior of the clock signal (`CLK100MHZ`), input switches (`SW`), push-button (`BTNC`), as well as the output signals controlling the relay switches (`Relay1` to `Relay4`) and the LED indicators (`LED`).
 
 This simulation provides confidence in the functionality and correctness of the Sound Synthesizer design before implementation on the FPGA hardware.
+### Video Demo and Project Files Download
+Here's a video demonstrating the results of our code in action:
+
+[![Video Demo](https://github.com/Mohamedt4r29/Relay-Controlled-Sound-Synthesizer/assets/51502560/ab2a7dec-32a8-439a-bc4c-3b222d5abf93)](https://github.com/Mohamedt4r29/Relay-Controlled-Sound-Synthesizer/assets/51502560/ab2a7dec-32a8-439a-bc4c-3b222d5abf93)
+
+If you'd like to download the project files, you can access them via the following link:
+
+[Download Project Files](https://drive.google.com/file/d/1B6X_Gj_meZIOL6gVW5wNe7sOObVb9xka/view?usp=drive_link)
+
+
+
 
 ## Schematic
 
