@@ -63,11 +63,11 @@ If you'd like to download the project files, you can access them via the followi
 
 ## Schematic
 
-Below is a schematic diagram illustrating the hardware configuration of our sound synthesizer project:
+Below is a schematic diagram illustrating the inner logic connections generated from Vivado for our sound synthesizer project:
 
 ![Schematic](https://github.com/Mohamedt4r29/Relay-Controlled-Sound-Synthesizer/assets/51502560/8739f45e-9bb1-4bd2-819b-c05e1cf5c758)
 
-This schematic provides a visual representation of the connections between the various components utilized in our project for the Nexys A7-50T FPGA board, such as relay modules, logic level converters, and other relevant hardware components. It serves as a helpful reference for understanding the hardware architecture and setup of our project.
+This schematic provides a visual representation of the internal logic connections within the FPGA, including signal routing, module interconnections, and other relevant logic elements. It serves as a helpful reference for understanding the internal hardware architecture and setup of our project.
 
 
 
