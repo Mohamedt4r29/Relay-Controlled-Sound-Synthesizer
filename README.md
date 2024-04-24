@@ -6,7 +6,7 @@ Welcome to the Relay-Controlled Sound Synthesizer project repository! Our aim is
 - **Mohamed Abdelreheem**: Responsible for constraints file, GitHub, and presentation.
 - **Miguel Ángel Jiménez Duarte**: Responsible for top-level code and RTL schematics.
 - **Yusuf Çetin Onaran**: Responsible for hardware design, schematics, GitHub, and physical implementation.
-- **Eirini Vasileiadi**: Responsible for presentation and video.
+- **Eirini Vasileiadi**: Responsible for presentation and physical implementation.
 
 
 ## Hardware Description of Demo Application
