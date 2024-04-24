@@ -27,11 +27,9 @@ architecture Behavioral of SoundSynthesizer is
 
     -- The initial state of the switches is set to be 0.
     signal state1,  state2,  state3,  state4  : std_logic := '0';
+    signal reset  : std_logic := '0';
     
     begin
-            
-    process (CLK100MHZ)
-   
             
     process (CLK100MHZ)
     
