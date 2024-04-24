@@ -54,8 +54,9 @@ This VHDL code forms the core of the Relay-Controlled Sound Synthesizer, providi
 To verify the functionality of the Sound Synthesizer design, we conducted simulations using Vivado Simulator. The simulation results confirmed that the synthesizer operates as expected, generating the desired rhythmic patterns based on the input switch states and button presses.
 
 Below is a snapshot of the simulation waveform:
+![simulation 2](https://github.com/Mohamedt4r29/Relay-Controlled-Sound-Synthesizer/assets/51502560/f305c8ed-a33f-42da-9f39-f868e9e722e0)
 
-![Simulation](https://github.com/Mohamedt4r29/Relay-Controlled-Sound-Synthesizer/assets/51502560/fac0a5a7-acab-4dcf-93a4-db7f8488ec7e)
+
 
 In the waveform, you can observe the behavior of the clock signal (`CLK100MHZ`), input switches (`SW`), push-button (`BTNC`), as well as the output signals controlling the relay switches (`Relay1` to `Relay4`) and the LED indicators (`LED`).
 
