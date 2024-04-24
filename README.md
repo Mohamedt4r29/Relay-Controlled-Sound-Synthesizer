@@ -63,15 +63,17 @@ In the waveform, you can observe the behavior of the clock signal (`CLK100MHZ`),
 This simulation provides confidence in the functionality and correctness of the Sound Synthesizer design before implementation on the FPGA hardware.
 
 ## Schematic
+In the following picture, it is possible to see the general overview of the working principle of the software of the project. 
+
+![image](https://github.com/Mohamedt4r29/Relay-Controlled-Sound-Synthesizer/assets/158856032/c8ad8bb0-d15e-4e61-a2f5-b94a064e8806)
 
 Below is a schematic diagram illustrating the inner logic connections generated from Vivado for our sound synthesizer project:
 
 ![image](https://github.com/Mohamedt4r29/Relay-Controlled-Sound-Synthesizer/assets/158856032/a5781c17-c0ef-4022-b400-901a37df569a)
+
 This schematic provides a visual representation of the internal logic connections within the FPGA, including signal routing, module interconnections, and other relevant logic elements. It serves as a helpful reference for understanding the internal hardware architecture and setup of our project.
 
-In the following picture, it is possible to see as well the working principle of the software of the project. 
 
-![image](https://github.com/Mohamedt4r29/Relay-Controlled-Sound-Synthesizer/assets/158856032/c8ad8bb0-d15e-4e61-a2f5-b94a064e8806)
 
 
 
