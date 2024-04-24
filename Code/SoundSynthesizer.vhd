@@ -31,57 +31,14 @@ architecture Behavioral of SoundSynthesizer is
     begin
             
     process (CLK100MHZ)
+   
+            
+    process (CLK100MHZ)
     
     begin 
-        if rising_edge(CLK100MHZ) then   
-
-            -- If the first switch is turned on, the signal is sent 
-            -- after one full period (0.9 seconds) for the single beat.  
-            if SW(0) = '1' then          
-                if period1 = 90000000 then
-                    state1 <= not state1;
-                    period1 <= 0;
-                else 
-                    period1 <= period1 + 1;
-                 end if;
-            end if;
-                
-            -- If the second switch is turned on, the signal is sent every 
-            -- half period (0.45 seconds) for the quaver beat. 
-            if SW(1) = '1' then
-                if period2 = 45000000 then
-                    state2 <= not state2;
-                     period2 <= 0;
-                else 
-                    period2 <= period2 + 1;
-                end if;
-            end if;
+        if rising_edge(CLK100MHZ) then    
             
-            -- If the second switch is turned on, the signal is sent every  
-            -- third fraction of period (0.3 seconds) for the triplet beat. 
-            if SW(2) = '1' then
-                if period3 = 30000000 then
-                    state3 <= not state3;
-                    period3 <= 0;
-                else
-                    period3 <= period3 +1;
-                end if;
-            end if;
-
-            -- If the second switch is turned on, the signal is sent every 
-            -- one quater of period (0.225 seconds) for the semi-quaver beat. 
-            if SW(3) = '1' then
-                if period4 = 22500000 then
-                    state4 <= not state4;
-                    period4 <= 0;
-                else 
-                    period4 <= period4 +1;
-                end if;
-            end if;
-
-            -- If the button is pressed, no matter which is the state of
-            -- any of the switches, the clock will be reset 
-            if BTNC = '1' then
+            if reset = '1' then
                 period1 <= 0;
                 period2 <= 0;
                 period3 <= 0;
@@ -90,23 +47,85 @@ architecture Behavioral of SoundSynthesizer is
                 state2 <= '0';
                 state3 <= '0';
                 state4 <= '0';
-                end if;
+                
+            else
+           -- If the first switch is turned on, the signal is sent 
+            -- after one full period (0.9 seconds) for the single beat.  
+                if SW(0) = '1' then          
+                    if period1 = 90000000 then
+                        state1 <= not state1;
+                        period1 <= 0;
+                    else 
+                        period1 <= period1 + 1;
+                    end if;
+                    end if;
 
+                        
+                 -- If the second switch is turned on, the signal is sent every 
+                 -- half period (0.45 seconds) for the quaver beat. 
+                if SW(1) = '1' then
+                    if period2 = 45000000 then
+                        state2 <= not state2;
+                        period2 <= 0;
+                    else 
+                         period2 <= period2 +1;
+                    end if;
+                    end if;
+                -- If the third switch is turned on, the signal is sent every  
+                -- third fraction of period (0.3 seconds) for the triplet beat. 
+                if SW(2) = '1' then
+                    if period3 = 30000000 then
+                        state3 <= not state3;
+                        period3 <= 0;
+                    else
+                        period3 <= period3 +1;
+                    end if;
+                    end if;
+                        
+             -- If the fourth switch is turned on, the signal is sent every 
+            -- one quater of period (0.225 seconds) for the semi-quaver beat. 
+                if SW(3) = '1' then
+                    if period4 = 22500000 then
+                        state4 <= not state4;
+                        period4 <= 0;
+                    else 
+                        period4 <= period4 +1;
+                    end if;
+                end if;
+               end if;
+               end if;
+               
+     
+    end process;
+                -- Sending the signal to each of the relays and to the leds.
+                JA(1) <= state1;
+                LED(0) <= state1;
+
+                JA(2) <= state2;
+                LED(1) <= state2;
+    
+                JA(3) <= state3;
+                LED(2) <= state3;
+    
+                JA(4) <= state4;
+                LED(3) <= state4;
+
+                        
+    process (CLK100MHZ)
+    begin
+        if rising_edge(CLK100MHZ) then
+            if BTNC = '0' then
+                reset <= '1';
+                
+            else
+                reset <= '0';
+                
+            end if;
         end if;
     end process;
-
-    -- Sending the signal to each of the relays and to the leds.
-    Relay1 <= state1;
-    LED(0) <= state1;
     
-    Relay2 <= state2;
-    LED(1) <= state2;
-    
-    Relay3 <= state3;
-    LED(2) <= state3;
-    
-    Relay4 <= state4;
-    LED(3) <= state4;
+                
     
     
 end Behavioral;
+
