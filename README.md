@@ -53,8 +53,7 @@ This VHDL code forms the core of the Relay-Controlled Sound Synthesizer, providi
 ## Video Demo
 Here's a video demonstrating the results of our code in action:
 
-[![Video Demo](https://github.com/Mohamedt4r29/Relay-Controlled-Sound-Synthesizer/assets/51502560/b0e89de0-d8c3-42d6-9b44-4cc40e8a2b04)](https://github.com/Mohamedt4r29/Relay-Controlled-Sound-Synthesizer/assets/51502560/b0e89de0-d8c3-42d6-9b44-4cc40e8a2b04)
-
+https://drive.google.com/file/d/1B6X_Gj_meZIOL6gVW5wNe7sOObVb9xka/view?usp=drive_link 
 
 
 ## Schematic
