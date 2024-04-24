@@ -61,6 +61,16 @@ Below is a snapshot of the simulation waveform:
 In the waveform, you can observe the behavior of the clock signal (`CLK100MHZ`), input switches (`SW`), push-button (`BTNC`), as well as the output signals controlling the relay switches (`Relay1` to `Relay4`) and the LED indicators (`LED`).
 
 This simulation provides confidence in the functionality and correctness of the Sound Synthesizer design before implementation on the FPGA hardware.
+
+## Schematic
+
+Below is a schematic diagram illustrating the inner logic connections generated from Vivado for our sound synthesizer project:
+
+![Schematic](https://github.com/Mohamedt4r29/Relay-Controlled-Sound-Synthesizer/assets/51502560/8739f45e-9bb1-4bd2-819b-c05e1cf5c758)
+
+This schematic provides a visual representation of the internal logic connections within the FPGA, including signal routing, module interconnections, and other relevant logic elements. It serves as a helpful reference for understanding the internal hardware architecture and setup of our project.
+
+
 ### Video Demo and Project Files Download
 Here's a video demonstrating the results of our code in action:
 
