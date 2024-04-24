@@ -50,10 +50,15 @@ The beat generation process is responsible for producing different rhythmic patt
 This VHDL code forms the core of the Relay-Controlled Sound Synthesizer, providing the logic for generating rhythmic patterns and controlling relay switches based on user input. It serves as a flexible and customizable platform for creating various musical sequences and exploring different beats and rhythms.
 
 
-## Video Demo
+### Video Demo and Project Files Download
 Here's a video demonstrating the results of our code in action:
 
-https://drive.google.com/file/d/1B6X_Gj_meZIOL6gVW5wNe7sOObVb9xka/view?usp=drive_link 
+[![Video Demo](https://github.com/Mohamedt4r29/Relay-Controlled-Sound-Synthesizer/assets/51502560/ab2a7dec-32a8-439a-bc4c-3b222d5abf93)](https://github.com/Mohamedt4r29/Relay-Controlled-Sound-Synthesizer/assets/51502560/ab2a7dec-32a8-439a-bc4c-3b222d5abf93)
+
+If you'd like to download the project files, you can access them via the following link:
+
+[Download Project Files](https://drive.google.com/file/d/1B6X_Gj_meZIOL6gVW5wNe7sOObVb9xka/view?usp=drive_link)
+
 
 
 ## Schematic
