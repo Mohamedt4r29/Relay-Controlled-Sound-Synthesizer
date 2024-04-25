@@ -52,7 +52,5 @@ begin
     Relay4 <= relay4_internal;
     LED    <= led_internal;
 
-    -- Clock constraint
-    create_generated_clock -name clk100mhz_pin -source [get_pins { CLK100MHZ }]
 
 end Behavioral;
