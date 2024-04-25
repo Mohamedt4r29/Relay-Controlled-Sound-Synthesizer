@@ -22,7 +22,8 @@ architecture Behavioral of SoundSynthesizer is
 
     -- Declaration of periods and states. 
     -- Initializing periods to be 0 and have a maximum duration of 90000000 nanoseconds (one beat) 
-    -- This duration was chosen due to the easiness of dividing into 2 (for the corchets), 3 (for the triplets) and 4 (for the quavers)
+    -- This duration was chosen due to the easiness of dividing into 2 (for the quavers), 
+    -- 3 (for the triplets) and 4 (for the semiquavers)
     signal period1, period2, period3, period4 : integer range 0 to 90000000 := 0;
 
     -- The initial state of the switches is set to be 0.
@@ -57,7 +58,6 @@ architecture Behavioral of SoundSynthesizer is
                         period1 <= period1 + 1;
                     end if;
                     end if;
-
                         
                  -- If the second switch is turned on, the signal is sent every 
                  -- half period (0.45 seconds) for the quaver beat. 
@@ -69,6 +69,7 @@ architecture Behavioral of SoundSynthesizer is
                          period2 <= period2 +1;
                     end if;
                     end if;
+                        
                 -- If the third switch is turned on, the signal is sent every  
                 -- third fraction of period (0.3 seconds) for the triplet beat. 
                 if SW(2) = '1' then
@@ -109,6 +110,7 @@ architecture Behavioral of SoundSynthesizer is
                 LED(3) <= state4;
 
                         
+    -- Process for initializing the clock with the reset button "BTNC"                    
     process (CLK100MHZ)
     begin
         if rising_edge(CLK100MHZ) then
